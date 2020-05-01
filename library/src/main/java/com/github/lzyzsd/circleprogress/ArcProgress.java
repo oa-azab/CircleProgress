@@ -309,16 +309,18 @@ public class ArcProgress extends View {
             text = String.valueOf(getProgress());
         }
 
-        if (!TextUtils.isEmpty(text)) {
-            textPaint.setColor(textColor);
-            textPaint.setTextSize(textSize);
-            float textHeight = textPaint.descent() + textPaint.ascent();
-            float textBaseline = (getHeight() - textHeight) / 2.0f;
-            canvas.drawText(text, (getWidth() - textPaint.measureText(text)) / 2.0f, textBaseline, textPaint);
-            textPaint.setTextSize(suffixTextSize);
-            float suffixHeight = textPaint.descent() + textPaint.ascent();
-            canvas.drawText(suffixText, getWidth() / 2.0f  + textPaint.measureText(text) + suffixTextPadding, textBaseline + textHeight - suffixHeight, textPaint);
-        }
+        // Disable drawing progress text
+
+        // if (!TextUtils.isEmpty(text)) {
+        //     textPaint.setColor(textColor);
+        //     textPaint.setTextSize(textSize);
+        //     float textHeight = textPaint.descent() + textPaint.ascent();
+        //     float textBaseline = (getHeight() - textHeight) / 2.0f;
+        //     canvas.drawText(text, (getWidth() - textPaint.measureText(text)) / 2.0f, textBaseline, textPaint);
+        //     textPaint.setTextSize(suffixTextSize);
+        //     float suffixHeight = textPaint.descent() + textPaint.ascent();
+        //     canvas.drawText(suffixText, getWidth() / 2.0f  + textPaint.measureText(text) + suffixTextPadding, textBaseline + textHeight - suffixHeight, textPaint);
+        // }
 
         if(arcBottomHeight == 0) {
             float radius = getWidth() / 2f;
